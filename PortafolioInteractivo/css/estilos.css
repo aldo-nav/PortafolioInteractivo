@@ -1,0 +1,483 @@
+
+/* Aquí defino los colores principales de mi página */
+:root{
+--color-fondo:#f5f7fc;
+--color-texto:#17233b;
+--color-azul:#365cf5;
+--color-morado:#8664f6;
+--color-borde:#e4e9f4;
+}
+/* Aquí preparo los estilos generales */
+html{
+scroll-behavior:smooth;
+scroll-padding-top:85px;
+}
+body{
+margin:0;
+color:var(--color-texto);
+background:var(--color-fondo);
+font-family:Arial,Helvetica,sans-serif;
+overflow-x:hidden;
+}
+h1,h2,h3,p{
+overflow-wrap:break-word;
+}
+h2{
+font-size:clamp(1.9rem,4vw,2.7rem);
+font-weight:800;
+letter-spacing:-0.04em;
+}
+/* Aquí diseño el logo y los enlaces de navegación */
+.marca{
+font-weight:800;
+letter-spacing:.02em;
+}
+.marca-icono{
+display:inline-grid;
+place-items:center;
+width:34px;
+height:34px;
+margin-right:8px;
+border-radius:10px;
+background:linear-gradient(135deg,var(--color-azul),var(--color-morado));
+}
+.navbar .nav-link{
+font-weight:600;
+margin-left:12px;
+}
+/* Aquí diseño la portada de mi página */
+.portada{
+padding:105px 0 100px;
+color:#fff;
+background:radial-gradient(circle at 82% 25%,rgba(117,105,255,.35),transparent 34%),linear-gradient(125deg,#111b38,#1b2e65 58%,#273c85);
+}
+.etiqueta-portada{
+display:inline-flex;
+align-items:center;
+gap:10px;
+padding:9px 15px;
+border:1px solid rgba(255,255,255,.22);
+border-radius:30px;
+color:#dce5ff;
+background:rgba(255,255,255,.08);
+font-size:.9rem;
+font-weight:600;
+}
+/* Este punto tiene una animación de latido */
+.punto-vivo{
+width:9px;
+height:9px;
+border-radius:50%;
+background:#70e4bf;
+animation-name:latido;
+animation-duration:1s;
+animation-timing-function:ease-in-out;
+animation-iteration-count:infinite;
+animation-direction:alternate;
+}
+.portada h1{
+max-width:760px;
+margin:22px 0;
+font-size:clamp(2.4rem,5.2vw,4.7rem);
+font-weight:800;
+line-height:1.1;
+letter-spacing:-.05em;
+}
+.portada h1 span{
+color:#aabaff;
+}
+.descripcion-portada{
+max-width:620px;
+color:#d5def5;
+font-size:1.1rem;
+line-height:1.75;
+}
+/* Aquí hago que el título aparezca deslizándose desde abajo */
+.titulo-animado{
+animation-name:entradaTitulo;
+animation-duration:1s;
+animation-timing-function:ease-out;
+animation-iteration-count:1;
+animation-fill-mode:both;
+}
+@keyframes entradaTitulo{
+from{
+opacity:0;
+transform:translateY(35px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+/* Aquí hago que el punto verde aumente y reduzca su tamaño */
+@keyframes latido{
+from{
+opacity:.45;
+transform:scale(.8);
+}
+to{
+opacity:1;
+transform:scale(1.2);
+}
+}
+/* Aquí personalizo los botones de Bootstrap */
+.btn-primary{
+background:var(--color-azul);
+border-color:var(--color-azul);
+}
+.btn-primary:hover{
+background:#2448dc;
+border-color:#2448dc;
+}
+/* Aquí organizo mi indicador de carga */
+.muestra-carga{
+display:flex;
+align-items:center;
+gap:12px;
+color:#d5def5;
+font-size:.9rem;
+}
+/* Aquí creo el cargador circular con una animación infinita */
+.cargador{
+display:inline-block;
+flex:none;
+width:24px;
+height:24px;
+border:3px solid rgba(255,255,255,.25);
+border-top-color:#83e5ff;
+border-radius:50%;
+animation-name:giroContinuo;
+animation-duration:1.2s;
+animation-timing-function:linear;
+animation-iteration-count:infinite;
+animation-direction:normal;
+}
+@keyframes giroContinuo{
+from{
+transform:rotate(0deg);
+}
+to{
+transform:rotate(360deg);
+}
+}
+/* Aquí creo una ventana decorativa con apariencia de código */
+.ventana-codigo{
+position:relative;
+max-width:440px;
+margin:0 auto;
+border:1px solid rgba(255,255,255,.23);
+border-radius:18px;
+background:rgba(255,255,255,.1);
+box-shadow:0 30px 65px rgba(0,0,0,.25);
+overflow:hidden;
+}
+.barra-ventana{
+display:flex;
+gap:8px;
+padding:17px 20px;
+border-bottom:1px solid rgba(255,255,255,.15);
+}
+.barra-ventana span{
+width:10px;
+height:10px;
+border-radius:50%;
+background:#fb6c7a;
+}
+.barra-ventana span:nth-child(2){
+background:#f8ca64;
+}
+.barra-ventana span:nth-child(3){
+background:#68d6a5;
+}
+.contenido-ventana{
+padding:38px;
+}
+.linea-codigo{
+height:10px;
+margin:16px 0;
+border-radius:8px;
+background:rgba(174,194,255,.38);
+}
+.linea-codigo.corta{
+width:35%;
+}
+.linea-codigo.mediana{
+width:62%;
+}
+.linea-codigo.larga{
+width:87%;
+}
+.simbolo-codigo{
+padding:15px 0;
+color:#b5c7ff;
+font-size:clamp(3.8rem,9vw,6.3rem);
+font-weight:800;
+text-align:center;
+}
+.sello-ventana{
+padding:15px 20px;
+background:rgba(10,19,47,.3);
+color:#e1e9ff;
+font-size:.85rem;
+text-align:center;
+}
+/* Aquí organizo la sección de proyectos */
+.seccion-proyectos{
+padding:90px 0 100px;
+}
+.encabezado-seccion{
+max-width:680px;
+margin:0 auto 45px;
+}
+.subtitulo{
+display:inline-block;
+margin-bottom:12px;
+color:var(--color-azul);
+font-size:.78rem;
+font-weight:800;
+letter-spacing:.17em;
+}
+.encabezado-seccion p{
+color:#62708b;
+}
+/* Aquí diseño las tarjetas y preparo sus transiciones */
+.tarjeta-proyecto{
+display:flex;
+flex-direction:column;
+align-items:flex-start;
+padding:30px;
+border:1px solid var(--color-borde);
+border-radius:18px;
+background:#fff;
+box-shadow:0 12px 32px rgba(34,54,94,.06);
+transition:transform .45s ease,box-shadow .45s ease;
+}
+.tarjeta-proyecto:hover,.tarjeta-proyecto:focus-within{
+box-shadow:0 22px 48px rgba(34,54,94,.16);
+}
+.numero-tarjeta{
+color:#97a3b8;
+font-size:.85rem;
+font-weight:700;
+}
+.icono-proyecto{
+display:grid;
+place-items:center;
+width:62px;
+height:62px;
+margin:25px 0 22px;
+border-radius:16px;
+background:#eaf0ff;
+color:var(--color-azul);
+font-size:2rem;
+font-weight:800;
+}
+.tarjeta-proyecto h3{
+font-size:1.35rem;
+font-weight:800;
+}
+.tarjeta-proyecto p{
+flex-grow:1;
+margin:12px 0 20px;
+color:#63718a;
+line-height:1.7;
+}
+.nombre-efecto{
+display:inline-block;
+margin-bottom:18px;
+padding:7px 11px;
+border-radius:8px;
+background:#edf1ff;
+color:#3652ba;
+font-size:.82rem;
+font-weight:700;
+}
+.enlace-proyecto{
+color:var(--color-azul);
+font-weight:700;
+text-decoration:none;
+}
+.enlace-proyecto:hover{
+text-decoration:underline;
+}
+/* TRANSFORMACIÓN 2D 1: Aquí hago girar la primera tarjeta */
+.tarjeta-rotacion:hover,.tarjeta-rotacion:focus-within{
+transform:rotate(3deg);
+}
+/* TRANSFORMACIÓN 2D 2: Aquí aumento el tamaño de la segunda tarjeta */
+.tarjeta-escala:hover,.tarjeta-escala:focus-within{
+transform:scale(1.06);
+}
+/* TRANSFORMACIÓN 2D 3: Aquí desplazo la tercera tarjeta hacia arriba */
+.tarjeta-traslacion:hover,.tarjeta-traslacion:focus-within{
+transform:translateY(-14px);
+}
+/* Aquí preparo la sección de transformación 3D */
+.seccion-3d{
+padding:95px 0;
+background:#eaf0fb;
+}
+.seccion-3d p{
+max-width:510px;
+color:#5c6981;
+line-height:1.8;
+}
+.indicacion-3d{
+font-weight:700;
+}
+/* Aquí aplico perspectiva al elemento padre */
+.escena-3d{
+display:block;
+width:min(100%,390px);
+height:270px;
+margin:0 auto;
+padding:0;
+border:0;
+border-radius:20px;
+background:transparent;
+cursor:pointer;
+perspective:1100px;
+}
+.escena-3d:focus-visible{
+outline:3px solid var(--color-azul);
+outline-offset:7px;
+}
+/* Aquí conservo la profundidad tridimensional de la tarjeta */
+.tarjeta-3d{
+position:relative;
+display:block;
+width:100%;
+height:100%;
+transform-style:preserve-3d;
+transition:transform .85s ease;
+}
+/* Aquí giro la tarjeta usando los ejes X e Y */
+.escena-3d:focus-visible .tarjeta-3d,.escena-3d[aria-pressed="true"] .tarjeta-3d{
+transform:rotateX(12deg) rotateY(180deg);
+}
+/* Aquí activo la rotación al pasar el mouse */
+@media(hover:hover) and (pointer:fine){
+.escena-3d:hover .tarjeta-3d{
+transform:rotateX(12deg) rotateY(180deg);
+}
+}
+/* Aquí diseño ambas caras de la tarjeta */
+.cara-3d{
+position:absolute;
+inset:0;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+gap:12px;
+padding:25px;
+border-radius:20px;
+color:white;
+text-align:center;
+backface-visibility:hidden;
+-webkit-backface-visibility:hidden;
+box-shadow:0 20px 35px rgba(25,43,92,.18);
+}
+.cara-frontal{
+background:linear-gradient(140deg,#345cf5,#8b65ee);
+}
+.cara-trasera{
+background:linear-gradient(140deg,#192c63,#294d8d);
+transform:rotateY(180deg);
+}
+.mini-etiqueta{
+font-size:.72rem;
+font-weight:800;
+letter-spacing:.18em;
+}
+.simbolo-3d{
+display:grid;
+place-items:center;
+width:76px;
+height:76px;
+border:2px solid rgba(255,255,255,.65);
+border-radius:22px;
+font-size:3rem;
+font-weight:800;
+}
+.simbolo-trasero{
+font-size:4rem;
+line-height:1;
+}
+.titulo-cara{
+font-size:1.3rem;
+font-weight:800;
+}
+.ayuda-cara{
+font-size:.85rem;
+opacity:.85;
+}
+/* Aquí diseño el formulario de contacto */
+.seccion-contacto{
+padding:100px 0;
+background:#fff;
+}
+.seccion-contacto p{
+color:#65718a;
+line-height:1.75;
+}
+.nota-formulario{
+padding:14px 17px;
+border-left:4px solid var(--color-azul);
+border-radius:6px;
+background:#eef2ff;
+font-size:.9rem;
+}
+.formulario-contacto{
+padding:30px;
+border:1px solid var(--color-borde);
+border-radius:18px;
+background:#f9faff;
+box-shadow:0 12px 35px rgba(30,51,94,.06);
+}
+.form-label{
+font-weight:700;
+}
+.form-control{
+padding:12px 14px;
+}
+.form-control:focus{
+border-color:#91a7ff;
+box-shadow:0 0 0 .2rem rgba(54,92,245,.13);
+}
+.pie-pagina{
+padding:24px 0;
+background:#151e34;
+color:#b9c6df;
+font-size:.88rem;
+}
+/* Aquí adapto la página para celulares y tablets pequeñas */
+@media(max-width:767.98px){
+.portada{
+padding:70px 0;
+}
+.seccion-proyectos,.seccion-3d,.seccion-contacto{
+padding:65px 0;
+}
+.formulario-contacto{
+padding:20px;
+}
+.tarjeta-rotacion:hover,.tarjeta-rotacion:focus-within{
+transform:rotate(2deg);
+}
+.tarjeta-escala:hover,.tarjeta-escala:focus-within{
+transform:scale(1.025);
+}
+}
+/* Aquí respeto la preferencia de reducir movimiento del usuario */
+@media(prefers-reduced-motion:reduce){
+html{
+scroll-behavior:auto;
+}
+*,*::before,*::after{
+animation-duration:.01ms!important;
+animation-iteration-count:1!important;
+transition-duration:.01ms!important;
+}
+}

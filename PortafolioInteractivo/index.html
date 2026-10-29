@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Portafolio interactivo de Nova Studio, un estudio ficticio de diseño y desarrollo web.">
+<title>Portafolio Interactivo | Nova Studio</title>
+<!-- Aquí conecto Bootstrap 5 para utilizar sus componentes -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Aquí conecto mi archivo de estilos personalizados -->
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<!-- Aquí creo la barra de navegación con menú hamburguesa para celulares -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+<div class="container">
+<!-- Aquí utilizo la fotografía de mi gato como logo personal -->
+<a class="navbar-brand marca" href="#inicio">
+<img src="img/imagen.jpg" alt="Logo de gato persa" class="logo-gato">
+Nova Studio
+</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir o cerrar el menú">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="menuPrincipal">
+<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+<li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+<li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+<li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+</ul>
+</div>
+</div>
+</nav>
+<!-- Aquí presento mi negocio ficticio y agrego una animación al título -->
+<header class="portada" id="inicio">
+<div class="container">
+<div class="row align-items-center g-5">
+<div class="col-12 col-lg-7">
+<span class="etiqueta-portada"><span class="punto-vivo"></span> Estudio creativo digital</span>
+<h1 class="titulo-animado">Transformamos ideas en <span>experiencias digitales.</span></h1>
+<p class="descripcion-portada">Somos Nova Studio, un negocio ficticio que crea páginas web modernas, marcas memorables y soluciones visuales para nuevos proyectos.</p>
+<div class="d-grid gap-2 d-sm-flex mt-4">
+<a class="btn btn-primary btn-lg" href="#proyectos">Ver proyectos</a>
+<a class="btn btn-outline-light btn-lg" href="#contacto">Contáctanos</a>
+</div>
+<!-- Este círculo será mi animación de carga infinita -->
+<div class="muestra-carga mt-4">
+<span class="cargador" aria-hidden="true"></span>
+<span>Ejemplo de loader CSS en movimiento</span>
+</div>
+</div>
+<div class="col-12 col-lg-5">
+<!-- Aquí creo una ventana tecnológica decorativa utilizando CSS -->
+<div class="ventana-codigo" aria-hidden="true">
+<div class="barra-ventana"><span></span><span></span><span></span></div>
+<div class="contenido-ventana">
+<div class="linea-codigo corta"></div>
+<div class="linea-codigo larga"></div>
+<div class="linea-codigo mediana"></div>
+<div class="simbolo-codigo">&lt;/&gt;</div>
+<div class="linea-codigo mediana"></div>
+<div class="linea-codigo larga"></div>
+</div>
+<div class="sello-ventana">HTML · CSS · Bootstrap</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main>
+<!-- Aquí distribuyo mis tres proyectos con el Grid de Bootstrap -->
+<section class="seccion-proyectos" id="proyectos">
+<div class="container">
+<div class="encabezado-seccion text-center">
+<span class="subtitulo">NUESTRO TRABAJO</span>
+<h2>Proyectos y transformaciones 2D</h2>
+<p>Pasa el mouse sobre cada tarjeta para observar un efecto CSS diferente.</p>
+</div>
+<div class="row g-4">
+<!-- Primera tarjeta: rotación -->
+<div class="col-sm-12 col-md-6 col-lg-4">
+<article class="tarjeta-proyecto tarjeta-rotacion h-100">
+<span class="numero-tarjeta">01</span>
+<div class="icono-proyecto">↻</div>
+<h3>Identidad de marca</h3>
+<p>Diseñamos identidades visuales para que cada negocio tenga una personalidad propia.</p>
+<span class="nombre-efecto">Efecto: rotate(3deg)</span>
+<a href="#contacto" class="enlace-proyecto">Consultar proyecto</a>
+</article>
+</div>
+<!-- Segunda tarjeta: escalado -->
+<div class="col-sm-12 col-md-6 col-lg-4">
+<article class="tarjeta-proyecto tarjeta-escala h-100">
+<span class="numero-tarjeta">02</span>
+<div class="icono-proyecto">⤢</div>
+<h3>Diseño web</h3>
+<p>Creamos sitios responsivos y fáciles de utilizar en celulares, tablets y computadoras.</p>
+<span class="nombre-efecto">Efecto: scale(1.06)</span>
+<a href="#contacto" class="enlace-proyecto">Consultar proyecto</a>
+</article>
+</div>
+<!-- Tercera tarjeta: traslación -->
+<div class="col-sm-12 col-md-6 col-lg-4">
+<article class="tarjeta-proyecto tarjeta-traslacion h-100">
+<span class="numero-tarjeta">03</span>
+<div class="icono-proyecto">↑</div>
+<h3>Experiencias digitales</h3>
+<p>Construimos interfaces con transiciones y animaciones que hacen más clara la navegación.</p>
+<span class="nombre-efecto">Efecto: translateY(-14px)</span>
+<a href="#contacto" class="enlace-proyecto">Consultar proyecto</a>
+</article>
+</div>
+</div>
+</div>
+</section>
+<!-- Aquí creo mi sección de transformación tridimensional -->
+<section class="seccion-3d" id="experiencia3d">
+<div class="container">
+<div class="row align-items-center g-5">
+<div class="col-12 col-lg-6">
+<span class="subtitulo">EFECTO ESPECIAL</span>
+<h2>Una experiencia en tres dimensiones</h2>
+<p>Esta tarjeta utiliza <strong>perspective</strong>, <strong>transform-style: preserve-3d</strong> y las transformaciones <strong>rotateX()</strong> y <strong>rotateY()</strong>.</p>
+<p class="indicacion-3d">Pasa el mouse sobre la tarjeta o tócala para girarla.</p>
+</div>
+<div class="col-12 col-lg-6">
+<!-- Uso un botón para que la tarjeta también funcione al tocarla -->
+<button class="escena-3d" id="control3d" type="button" aria-pressed="false" aria-label="Girar tarjeta 3D">
+<span class="tarjeta-3d">
+<span class="cara-3d cara-frontal">
+<span class="mini-etiqueta">NOVA STUDIO</span>
+<span class="simbolo-3d">N</span>
+<span class="titulo-cara">Diseño sin límites</span>
+<span class="ayuda-cara">Pasa el mouse o haz clic para girar</span>
+</span>
+<span class="cara-3d cara-trasera">
+<span class="mini-etiqueta">EXPERIENCIA 3D</span>
+<span class="simbolo-trasero">✦</span>
+<span class="titulo-cara">Creatividad en movimiento</span>
+<span class="ayuda-cara">Efectos hechos con CSS puro</span>
+</span>
+</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Aquí creo el formulario de contacto con componentes Bootstrap -->
+<section class="seccion-contacto" id="contacto">
+<div class="container">
+<div class="row g-5 align-items-start">
+<div class="col-12 col-lg-5">
+<span class="subtitulo">HABLEMOS</span>
+<h2>¿Tienes una idea para desarrollar?</h2>
+<p>Completa el formulario para probar los campos y las validaciones de Bootstrap.</p>
+<p class="nota-formulario">Este formulario es una demostración: valida los datos, pero no envía correos reales.</p>
+</div>
+<div class="col-12 col-lg-7">
+<form id="formularioContacto" class="formulario-contacto" novalidate>
+<div class="row g-3">
+<div class="col-12 col-md-6">
+<label for="nombre" class="form-label">Nombre</label>
+<input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre" minlength="2" maxlength="80" required>
+<div class="invalid-feedback">Escribe un nombre de al menos 2 caracteres.</div>
+</div>
+<div class="col-12 col-md-6">
+<label for="correo" class="form-label">Email</label>
+<input type="email" class="form-control" id="correo" name="correo" placeholder="nombre@ejemplo.com" required>
+<div class="invalid-feedback">Escribe un correo electrónico válido.</div>
+</div>
+<div class="col-12">
+<label for="mensaje" class="form-label">Mensaje</label>
+<textarea class="form-control" id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos sobre tu proyecto" minlength="10" required></textarea>
+<div class="invalid-feedback">Escribe un mensaje de al menos 10 caracteres.</div>
+</div>
+</div>
+<div class="d-grid gap-2 d-sm-flex justify-content-sm-end mt-4">
+<button type="submit" class="btn btn-primary px-4">Enviar</button>
+<button type="reset" class="btn btn-secondary px-4">Limpiar</button>
+</div>
+<div class="alert alert-success mt-3 d-none" id="avisoFormulario" role="status"></div>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Aquí agrego el pie de página -->
+<footer class="pie-pagina">
+<div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+<span>© 2026 Nova Studio · Portafolio Interactivo</span>
+<span>Proyecto académico con Bootstrap 5 y CSS por ALDO AGUSTO NAVENTA CHOQUE</span>
+</div>
+</footer>
+<!-- Este archivo permite que funcione el menú hamburguesa de Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Aquí conecto el JavaScript externo de mi proyecto -->
+<script src="js/formulario.js"></script>
+</body>
+</html>
